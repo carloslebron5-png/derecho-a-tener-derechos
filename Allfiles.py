@@ -309,7 +309,11 @@ with col_izq:
     st.markdown("### Pregunta para pensar")
     st.write(derecho["pregunta"])
 
-    seleccion = st.radio(
+        seleccion = st.radio(
         "Selecciona una respuesta:",
+        derecho["opciones"],
+        index=None,
+        key=f"quiz_{indice}",
+    )
         derecho["opciones"],
         index=None,
